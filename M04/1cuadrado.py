@@ -6,7 +6,8 @@ Un programa para encontrar el cuadrado de un número y evaluar condiciones.
 """
 
 # Definir el número base - Hard Coded
-num = 4
+#num = 4
+num = int(input("Ingresa un numero para sacar su cuadrado y evaluar si es positivo o negativo: "))
 
 # TODO Tarea 1: Crear una variable para almacenar el cuadrado (debe ser el numero base multiplicado por sí mismo)
 cuadrado = num * num  # Reemplaza con tu código
