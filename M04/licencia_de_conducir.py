@@ -15,21 +15,32 @@ Salida clara: Muestra un mensaje personalizado indicando si la persona puede
    ¿Qué imprudencia o descuido no le permitirías a tu abuela antes de subirse al auto?
      (Ejemplo: "¿Olvidó los lentes en la cocina?")
 """
-edad = int(input("¿Qué edad tienes? "))
+print("Evaluación de condiciones para conducir")
 
-if edad <= 17:
-    print("Eres menor de edad, aun no puedes conducir.")
-elif edad >= 18 and edad <= 70:
-    lentes = input("Usas lentes? (s/n): ")
-    if lentes.lower() == "s":
-        print("¡No puedes conducir sin tus lentes!")
-    else:
-        print("¡Puedes conducir! Pero recuerda siempre usar tus lentes si los necesitas.")
-elif edad > 70:
-    audifonos = input("¿Usas audífonos para escuchar? (s/n): ")
-    if audifonos.lower() == "s":
-        print("¡No olvides tus audífonos al manejar!.")
-    else:
-        print("¡Puedes conducir! Pero ten cuidado y mantén la atención en la carretera.")
+# ENTRADA DE DATOS
+edad = int(input("Ingresa tu edad: "))
+
+# VERIFICACION 1 DE LA EDAD
+if edad < 18:
+    print("No puedes conducir por que aun eres menor de edad. Vuelve en un año")
 else:
-    print("Edad no válida. Por favor ingresa una edad correcta.")     
+    print("Responde las siguientes preguntas, para completar la solicitud.")
+
+    # PREGUNTAS PARA CONTINUAR
+    tiene_licencia = input("¿Tienes licencia vigente? (s/n): ").strip().lower() == "s"
+    alcohol = input("¿Has consumido alcohol recientemente? (s/n): ").strip().lower() == "s"
+    cansado = input("¿Te sientes cansado o somnoliento? (s/n): ").strip().lower() == "s"
+
+#ESTRUCTURA DE CONTROL PARA EVALUAR CONDICIONES
+#CASO 1 ESTA ALCOHOLIZADO O CANSADO
+if alcohol or cansado:
+    print("No puedes conducir debido a tus condiciones actuales. Entrega las llaves inmediatamente.")
+#CASO 2 NO TIENE LICENCIA VIGENTE
+elif not tiene_licencia:
+    print("No puedes conducir porque no tienes una licencia vigente.")
+#CASO 3 TIENE LICENCIA, NO ESTA ALCOHOLIZADO NI CANSADO
+elif tiene_licencia and not alcohol and not cansado:
+    print("Puedes conducir. Cumples con todos los requisitos! Diosito te bendiga!")
+
+else:
+    print("No se puede completar la aplicacion")
