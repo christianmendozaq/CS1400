@@ -22,10 +22,12 @@ es_valida = len(linea.strip()) > 0  # Reemplaza con tu código (ej: len(linea) >
 # Si 'es_valida' es True, alinea el texto a la derecha con .rjust(80) e imprímelo.
 # De lo contrario, imprime un mensaje de error pidiendo que escriban algo.
 if es_valida:
-    linea_alineada = linea.rjust(80)
-    print(linea_alineada)
+    linea_alineada = linea.rjust(80) #Si es true, alinea la línea a la derecha.
+    print(linea_alineada) #imprime la línea alineada a la derecha
+elif len(linea) > 50:
+    print("La línea es demasiado larga.") #imprime un mensaje si la línea tiene más de 50 caracteres
 else:
-    print("Error: No ingresaste ninguna línea.")
+    print("Error: No ingresaste ninguna línea.")#imprime un mensaje de error si la línea está vacía
 
 
 # TODO Reto: Agrega una condición adicional para verificar si la línea tiene más de 50 caracteres 
