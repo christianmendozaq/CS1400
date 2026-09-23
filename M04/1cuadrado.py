@@ -10,6 +10,7 @@ num = 4
 
 # TODO Tarea 1: Crear una variable para almacenar el cuadrado (debe ser el numero base multiplicado por sí mismo)
 cuadrado = num * num  # Reemplaza con tu código
+# AL MULTIPLICAR UN NUMERO POR SI MISMO, SE SACA EL CUADRADO.
 
 # Mostrar el resultado con un f-string 
 print(f"El cuadrado de {num} es: {cuadrado}")
@@ -17,12 +18,11 @@ print(f"El cuadrado de {num} es: {cuadrado}")
 # Salida esperada:
 # El cuadrado de 4 es: 16
 
-"""
 # TODO Tarea 2: Usa un operador de comparación para verificar si el número es positivo (mayor que 0).
 # Guarda el valor booleano (True o False) en una variable llamada 'es_positivo'.
-es_positivo = False  # Reemplaza con tu código
+es_positivo = num > 0  # Reemplaza con tu código
 
-
+"""
 # TODO Tarea 3: Agrega una estructura if/else 
 # Si el número es positivo, imprime un mensaje diciendo que lo es. De lo contrario, imprime otro mensaje.
 # if ____________:
