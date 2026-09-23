@@ -1,5 +1,6 @@
 """
-NOMBRE: [Tu Nombre]
+NOMBRE: CHRISTIAN MENDOZA
+FECHA: 22 SEPTIEMBRE 2026
 MODULO 4 - PROYECTO - TAREA 1
 Un programa para encontrar el cuadrado de un número y evaluar condiciones.
 """
@@ -8,7 +9,7 @@ Un programa para encontrar el cuadrado de un número y evaluar condiciones.
 num = 4
 
 # TODO Tarea 1: Crear una variable para almacenar el cuadrado (debe ser el numero base multiplicado por sí mismo)
-cuadrado = 0  # Reemplaza con tu código
+cuadrado = num * num  # Reemplaza con tu código
 
 # Mostrar el resultado con un f-string 
 print(f"El cuadrado de {num} es: {cuadrado}")
@@ -16,7 +17,7 @@ print(f"El cuadrado de {num} es: {cuadrado}")
 # Salida esperada:
 # El cuadrado de 4 es: 16
 
-
+"""
 # TODO Tarea 2: Usa un operador de comparación para verificar si el número es positivo (mayor que 0).
 # Guarda el valor booleano (True o False) en una variable llamada 'es_positivo'.
 es_positivo = False  # Reemplaza con tu código
@@ -32,3 +33,5 @@ es_positivo = False  # Reemplaza con tu código
 
 # TODO Reto: Modifica la variable 'num' para que sea ingresado por el usuario usando la función input().
 # Recuerda convertir el valor ingresado a entero usando int().
+
+"""
