@@ -21,16 +21,16 @@ print(f"El cuadrado de {num} es: {cuadrado}")
 # TODO Tarea 2: Usa un operador de comparación para verificar si el número es positivo (mayor que 0).
 # Guarda el valor booleano (True o False) en una variable llamada 'es_positivo'.
 es_positivo = num > 0  # Reemplaza con tu código
+# Verifica si el número es positivo y almacena el resultado en 'es_positivo'.
 
-"""
 # TODO Tarea 3: Agrega una estructura if/else 
 # Si el número es positivo, imprime un mensaje diciendo que lo es. De lo contrario, imprime otro mensaje.
-# if ____________:
-#     print("El número es positivo.")
-# else:
-#     print("El número no es positivo.")
+if es_positivo:
+    print("El número es positivo.")
+else:
+    print("El número es negativo.")
 
-
+"""
 # TODO Reto: Modifica la variable 'num' para que sea ingresado por el usuario usando la función input().
 # Recuerda convertir el valor ingresado a entero usando int().
 
