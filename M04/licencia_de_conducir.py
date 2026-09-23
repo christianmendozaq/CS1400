@@ -43,4 +43,4 @@ elif tiene_licencia and not alcohol and not cansado:
     print("Puedes conducir. Cumples con todos los requisitos! Diosito te bendiga!")
 
 else:
-    print("No se puede completar la aplicacion")
+    print("No se puede completar la evaluación.")
