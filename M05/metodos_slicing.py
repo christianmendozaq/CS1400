@@ -69,6 +69,7 @@ Predicciones de Salida (Escribe el resultado exacto):
 # 10. ¿Resultado de la Línea F math.sqrt(intNum)? 3.0
 
 """
+"""
 # Sección 3: Comparación de Textos mediante ASCII / Unicode
 # Las funciones max() y min() en Python no solo funcionan con números; en cadenas de texto comparan valores según la tabla 
 # de caracteres ASCII/Unicode.
@@ -79,7 +80,7 @@ Predicciones de Salida (Escribe el resultado exacto):
 miMax = min("Banano", "manzana", "Zanahoria")
 print("El máximo es:", miMax)
 
-"""
+
 Análisis:
 # 11. Antes de ejecutar: ¿Cuál crees que será el resultado devuelto por max()?
 
@@ -100,4 +101,27 @@ Como max() busca el valor más grande según la tabla Unicode, las letras minús
 
 Resultado: Banano
 
+"""
+# Sección 4: Aplicación Práctica – Física y Matemáticas
+# La policía de tránsito calcula la velocidad v de un auto a partir de la longitud d de la huella de frenado utilizando la fórmula: 
+# v = \sqrt{20 \cdot d}.
+# ==========================================
+
+#Código 4.1:
+
+import math
+
+d = int(input("Ingresa la longitud de la huella de frenado (en metros): "))
+
+# Completa la ecuación usando math.sqrt():
+v = math.sqrt(20 * d)
+
+print("Velocidad estimada del auto:", round(v, 2), "km/h")
+
+"""
+Análisis:
+# 15. Completa la asignación v = en el código superior utilizando la función math.sqrt() y la fórmula entregada. 
+# Escribe la línea completa a continuación:
+
+Respuesta: v = math.sqrt(20 * d)
 """
