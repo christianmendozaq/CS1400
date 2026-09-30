@@ -179,7 +179,7 @@ el bucle finaliza sin imprimir el número 3 ni los siguientes.
 # que el usuario ingrese la clave correcta?
 Usaria la sentencia break para salir del bucle una vez que la condicion de acceso sea correcta.
 """
-
+"""
 # Sección 6: Patrones de Acumulación y Conteo
 # Un patrón común en programación consiste en acumular valores o contar ocurrencias a medida que iteramos
 # ==========================================
@@ -198,7 +198,7 @@ for num in numeros:
 print("Suma total:", suma_total)
 print("Cantidad de números mayores a 5:", mayores_a_cinco)
 
-"""
+
 Análisis:
 # 20. ¿Con qué valor deben inicializarse las variables suma_total y mayores_a_cinco antes de comenzar el bucle? 
 # ¿Qué pasaría si las inicializas dentro del bucle?
@@ -210,4 +210,33 @@ Un contador suma la cantidad fija contantemente cada vez que se cumple la condic
 Mientras que el acumulador suma una cantidad variable en cada iteracion. 
 Su objetivo es como responder a la pregunta: Cuanto suman en total estos valores? (esta parte me la explico a profundidad gemini
 y me gusto ponerlo para recordarlo facilmente)
+"""
+
+# Sección 7: Normalización de Textos con .lower()
+# Analiza cómo formatear cadenas dentro o fuera de un bucle para realizar comparaciones precisas.
+# ==========================================
+
+#Código 7:
+sujeto1 = "Python"
+sujeto2 = "python"
+
+if sujeto1.lower() == sujeto2.lower():
+    print("Iguales")
+else:
+    print("Diferentes")
+
+"""
+Análisis:
+# 22. Observa las variables sujeto1 y sujeto2. ¿Cuál es la diferencia visual entre ambos textos y cuál es el resultado de la comparación inicial?
+La diferencia es la P mayuscula y miniscula y el resultado de la comparación inicial es "Diferentes".
+(Por que Python las cadenas son sensibles a las mayusculas y minusculas por su valor en Unicode/ASCII)
+
+# 23. Modifica la condición a if sujeto1.lower() == sujeto2.lower():. Ejecuta el código nuevamente. 
+# ¿Qué resultado obtienes y qué transformación realiza el método .lower()?
+El resultado es "Iguales" por que usando .lower() se convierten ambas cadenas a minusculas.
+
+# 24. ¿Por qué es útil aplicar .lower() a las respuestas del usuario cuando trabajamos con entradas dentro de un bucle while 
+# (por ejemplo, al validar "SI", "Si" o "si")?
+Para asegurarnos que la comparacion de las respuestas del usuario no dependa de si se escriben en mayúsculas o minúsculas.
+El valor siempre se transforma a minusculas antes de la comparacion.
 """
