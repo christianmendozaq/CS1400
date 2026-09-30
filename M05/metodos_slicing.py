@@ -126,6 +126,7 @@ Análisis:
 
 Respuesta: v = math.sqrt(20 * d)
 """
+"""
 # Sección 5: Segmentación de Cadenas (Slicing)
 # El slicing o rebanado permite extraer subcadenas utilizando la sintaxis cadena[inicio:fin:paso].
 # ==========================================
@@ -137,7 +138,7 @@ nombre = "Building Puentes"
 print("Índice 0:", nombre[0])
 print("Segmento:", nombre[9:])
 
-"""
+
 Análisis:
 # 16. ¿Qué carácter imprime exactamente nombre[0]? La B
 
@@ -152,3 +153,27 @@ Opción con 2 valores: nombre[ 9 : 16 ]
 Opción con límite implícito: nombre[ 9 : ]
 #Al omitir el valor después de los dos puntos (:), Python toma automáticamente hasta el final de la cadena.
 """
+# Sección 6: Filtrado e Inspección de Caracteres en Cadenas
+# Podemos usar bucles combinados con condicionales para inspeccionar y filtrar tipos específicos de caracteres dentro de un texto.
+# ==========================================
+
+#Código 6.1:
+
+texto = input("Ingresa una frase con letras y números: ")
+contador_numeros = 0
+
+for caracter in texto:
+    if caracter >= "0" and caracter <= "9":
+        contador_numeros += 1
+
+print("Total de dígitos numéricos encontrados:", contador_numeros)
+
+"""
+Análisis:
+# 19. Ejecuta el programa e ingresa el texto "3 tigres en 2 árboles". ¿Qué valor imprime contador_numeros? 2
+
+# 20. Observa la condición del if. Explica cómo evalúa Python si un carácter individual es un dígito numérico usando los operadores >= y <=.
+Por que Python compara los caracteres utilizando sus valores en la tabla ASCII / Unicode: los caracteres "0" a "9" tienen valores consecutivos, por lo que la condición if verifica si el carácter está dentro de ese rango.
+(del 48 al 57), y las letras y los espacios están en otras posiciones de la fila, totalmente fuera de ese rango que le dimos.
+"""
+
