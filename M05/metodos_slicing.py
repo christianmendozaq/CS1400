@@ -102,6 +102,7 @@ Como max() busca el valor más grande según la tabla Unicode, las letras minús
 Resultado: Banano
 
 """
+"""
 # Sección 4: Aplicación Práctica – Física y Matemáticas
 # La policía de tránsito calcula la velocidad v de un auto a partir de la longitud d de la huella de frenado utilizando la fórmula: 
 # v = \sqrt{20 \cdot d}.
@@ -118,10 +119,36 @@ v = math.sqrt(20 * d)
 
 print("Velocidad estimada del auto:", round(v, 2), "km/h")
 
-"""
+
 Análisis:
 # 15. Completa la asignación v = en el código superior utilizando la función math.sqrt() y la fórmula entregada. 
 # Escribe la línea completa a continuación:
 
 Respuesta: v = math.sqrt(20 * d)
+"""
+# Sección 5: Segmentación de Cadenas (Slicing)
+# El slicing o rebanado permite extraer subcadenas utilizando la sintaxis cadena[inicio:fin:paso].
+# ==========================================
+
+#Código 5.1:
+
+nombre = "Building Puentes"
+
+print("Índice 0:", nombre[0])
+print("Segmento:", nombre[9:])
+
+"""
+Análisis:
+# 16. ¿Qué carácter imprime exactamente nombre[0]? La B
+
+# 17. ¿En qué posición (índice) exacta se encuentra el espacio en blanco entre ambas palabras? En el 8 por que se cuenta desde 0.
+
+# 18. Modifica los índices en nombre[X:Y] para extraer e imprimir exactamente la palabra "Puentes".
+
+Opción con 2 valores: nombre[ 9 : 16 ]
+#La 'P' está en el índice 9 y la 's' final en el 15. Dado que el límite superior es exclusivo,
+# debemos indicar 16 para incluir la última letra.
+
+Opción con límite implícito: nombre[ 9 : ]
+#Al omitir el valor después de los dos puntos (:), Python toma automáticamente hasta el final de la cadena.
 """
