@@ -22,7 +22,7 @@ Uso de bucles (for / while), listas, validación y estructuras de control.
 
  #importando el modulo math
 import math
-
+"""
 # --- PARTE 1: Iteración sobre una lista de datos (FOR Loop) ---
 
 radios = [5, 12, -3, 8, 0]
@@ -38,6 +38,7 @@ for radio in radios:
         print(f"Radio: {radio} y el area es: {area}")
     else:
         print(f"Radio: {radio} Error: El radio debe ser mayor que cero.")
+        
 """
 # --- PARTE 2: Iteración interactiva y continua (WHILE Loop) ---
 
@@ -70,4 +71,4 @@ print("\n--- Modo Interactivo (Escribe 'salir' para terminar) ---")
      # Otra manera de encontrar errores del usuario. Descomenta las siguientes lineas al finalizar tu while loop.       
     #except ValueError:
      #   print("Error: Por favor ingresa un número válido o la palabra 'salir'.\n")
-     """
+    
