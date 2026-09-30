@@ -146,6 +146,7 @@ La mejor opcion es usar la iteracion directa (for fruta in frutas:), por que el 
 lo guarda y lo usa, en la siguiente iteración toma el segundo y asi sucesivamente. Mientras que con el acceso por índices
 primero cuenta cuantos elementos hay en la lista y luego accede a cada uno mediante su índice, que tu le tienes que proporcionar manualmente.
 """
+"""
 # Sección 5: Sentencias de Control de Bucles (break y continue)
 # Podemos alterar el flujo normal de un bucle mediante instrucciones de control.
 # ==========================================
@@ -164,7 +165,7 @@ for num in range(1, 6):
         break
     print("Número:", num)
 
-"""
+
 Análisis:
 # 17. Observa la salida de la Demostración de continue. ¿Qué número falta en la secuencia impresa y por qué ocurrió esto?
 Falto el numero 3 por que cuando la variable "num" es igual a 3, se ejecuta el continue que hace que se salte la iteracion actual
@@ -179,4 +180,34 @@ el bucle finaliza sin imprimir el número 3 ni los siguientes.
 Usaria la sentencia break para salir del bucle una vez que la condicion de acceso sea correcta.
 """
 
+# Sección 6: Patrones de Acumulación y Conteo
+# Un patrón común en programación consiste en acumular valores o contar ocurrencias a medida que iteramos
+# ==========================================
 
+#Código 6:
+# Acumulador de suma y contador de coincidencias
+numeros = [4, 7, 2, 9, 10, 5]
+suma_total = 0
+mayores_a_cinco = 0
+
+for num in numeros:
+    suma_total += num  # Acumula la suma
+    if num > 5:
+        mayores_a_cinco += 1  # Incrementa el contador
+
+print("Suma total:", suma_total)
+print("Cantidad de números mayores a 5:", mayores_a_cinco)
+
+"""
+Análisis:
+# 20. ¿Con qué valor deben inicializarse las variables suma_total y mayores_a_cinco antes de comenzar el bucle? 
+# ¿Qué pasaría si las inicializas dentro del bucle?
+Se deben inicializar con 0 antes de comenzar el bucle.
+Si se inicializaran dentro del bucle, se reiniciarían en 0 en cada iteración y y se perderian los valores acumulados previamente.
+
+# 21. Explica con tus palabras la diferencia entre un acumulador (suma_total += num) y un contador (mayores_a_cinco += 1).
+Un contador suma la cantidad fija contantemente cada vez que se cumple la condicion especificada.
+Mientras que el acumulador suma una cantidad variable en cada iteracion. 
+Su objetivo es como responder a la pregunta: Cuanto suman en total estos valores? (esta parte me la explico a profundidad gemini
+y me gusto ponerlo para recordarlo facilmente)
+"""
