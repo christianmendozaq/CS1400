@@ -153,6 +153,7 @@ Opción con 2 valores: nombre[ 9 : 16 ]
 Opción con límite implícito: nombre[ 9 : ]
 #Al omitir el valor después de los dos puntos (:), Python toma automáticamente hasta el final de la cadena.
 """
+"""
 # Sección 6: Filtrado e Inspección de Caracteres en Cadenas
 # Podemos usar bucles combinados con condicionales para inspeccionar y filtrar tipos específicos de caracteres dentro de un texto.
 # ==========================================
@@ -168,7 +169,7 @@ for caracter in texto:
 
 print("Total de dígitos numéricos encontrados:", contador_numeros)
 
-"""
+
 Análisis:
 # 19. Ejecuta el programa e ingresa el texto "3 tigres en 2 árboles". ¿Qué valor imprime contador_numeros? 2
 
@@ -177,3 +178,28 @@ Por que Python compara los caracteres utilizando sus valores en la tabla ASCII /
 (del 48 al 57), y las letras y los espacios están en otras posiciones de la fila, totalmente fuera de ese rango que le dimos.
 """
 
+# Sección 7: Investigación de Métodos de Cadenas (String Methods)
+# Investiga en la documentación oficial de Python o en W3Schools el funcionamiento de los siguientes métodos
+#  y explica brevemente para qué sirven:
+# ==========================================
+
+"""
+# 21. Método .rfind('a'):
+
+Descripción: 
+Busca la última posición (índice) donde aparece el carácter 'a' dentro del texto recorriéndolo de derecha a izquierda.
+Devuelve -1 si no lo encuentra.
+
+
+# 22. Método .isalpha():
+
+Descripción:
+Evalúa si la totalidad de los caracteres presentes en un string corresponden a letras.
+Si la cadena contiene un solo carácter que no sea una letra (un espacio, un número, un guion, una coma), la función evaluará a False.
+
+# 23. Método .isdigit():
+
+Descripción:
+Verifica si todos los caracteres de la cadena de texto son números enteros comprendidos entre el 0 y el 9. 
+Si la cadena contiene letras, símbolos o caracteres de formato, devuelve False.
+"""
