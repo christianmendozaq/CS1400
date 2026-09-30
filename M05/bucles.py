@@ -68,6 +68,7 @@ Entra en un bucle infinito por que la variable "respuesta" siempre sigue siendo 
 Ctrl + C (en Windows/Linux/macOS) envía una señal de interrupción de teclado (KeyboardInterrupt) a la terminal para forzar la detención
 inmediata del script.
 """
+"""
 # Sección 3: Bucle for y la Función range() (Iteración Definida)
 # Usamos for cuando queremos iterar sobre un número conocido de repeticiones o sobre una secuencia.
 # ==========================================
@@ -79,7 +80,7 @@ num = int(input("Introduce un número límite: "))
 for i in range(2, 11, 2):
     print("Iteración:", i)
 
-"""
+
 Análisis:
 # 8. Ejecuta el programa e ingresa el valor 10. ¿Cuántas veces se imprimió la palabra "Iteración"? ¿Influyó en algo el número ingresado
 # por teclado en este primer intento?
@@ -113,4 +114,35 @@ Modifica la línea a: range(2, 11, 2).
 # 14. Ejecuta el programa. ¿Qué valores se imprimieron y qué función cumple el tercer argumento dentro de range(inicio, fin, paso)?
 Los valores que se imprimieron fueron: 2, 4, 6, 8, 10.
 El tercer argumento especifica el incremento o tamaño del paso entre cada iteración.
+"""
+
+# Sección 4: Iteración sobre Secuencias (Cadenas y Listas)
+# Un bucle for permite iterar directamente sobre los elementos de una colección sin necesidad de usar contadores manualmente.
+# ==========================================
+
+#Código 4:
+# Iteración sobre una cadena de texto
+palabra = "Python"
+
+print("--- Letras de la palabra ---")
+for letra in palabra:
+    print(letra)
+
+# Iteración sobre una lista
+frutas = ["manzana", "banana", "cereza"]
+
+print("--- Lista de frutas ---")
+for fruta in frutas:
+    print(fruta)
+
+"""
+Análisis:
+# 15. En el primer bucle for letra in palabra:, ¿qué representa la variable letra en cada paso del bucle?
+Representa un caracter individual de la cadena de texto leyendolo de izquierda a derecha.
+
+# 16. En el segundo bucle for fruta in frutas:, contrasta la iteración directa (for fruta in frutas:) con el acceso por índices
+# (for i in range(len(frutas)):). ¿Cuál de las dos opciones resulta más legible para un principiante y por qué?
+La mejor opcion es usar la iteracion directa (for fruta in frutas:), por que el programa toma el primer elemento de la lista
+lo guarda y lo usa, en la siguiente iteración toma el segundo y asi sucesivamente. Mientras que con el acceso por índices
+primero cuenta cuantos elementos hay en la lista y luego accede a cada uno mediante su índice, que tu le tienes que proporcionar manualmente.
 """
