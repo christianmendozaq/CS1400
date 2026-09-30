@@ -8,6 +8,8 @@
 # Analizaremos cómo usar pasos negativos para contar hacia atrás.
 # ==========================================
 
+#Código 1.1:
+
 # Conteo descendente
 num = int(input("Introduce el número inicial: "))
 
@@ -33,9 +35,13 @@ Respuesta: for i in range(num, -1, -2):
                 print("Conteo:", i)
 
 """
+
+"""
 # Sección 2: Funciones Matemáticas de Python (math)
 # Python incluye funciones matemáticas integradas (built-in) y un módulo especializado llamado math.
 # ==========================================
+
+#Código 2.1:
 
 import math
 
@@ -49,7 +55,6 @@ print( abs(decNum) )        # Línea D  #Devuelve el valor absoluto del número,
 print( math.pow(intNum, 2) ) # Línea E #Eleva un número a una potencia, En este caso, eleva 9 a la potencia 2. La función math.pow() siempre devuelve un número flotante
 print( math.sqrt(intNum) )   # Línea F #Calcula la raíz cuadrada (square root) del número. todas las funciones matemáticas del módulo math convierten internamente el resultado a tipo float.
 
-"""
 Predicciones de Salida (Escribe el resultado exacto):
 # 5. ¿Resultado de la Línea A round(decNum, 2)? 34.57 
 
@@ -62,4 +67,33 @@ Predicciones de Salida (Escribe el resultado exacto):
 # 9. ¿Resultado de la Línea E math.pow(intNum, 2)? 81.0
 
 # 10. ¿Resultado de la Línea F math.sqrt(intNum)? 3.0
+
+"""
+# Sección 3: Comparación de Textos mediante ASCII / Unicode
+# Las funciones max() y min() en Python no solo funcionan con números; en cadenas de texto comparan valores según la tabla 
+# de caracteres ASCII/Unicode.
+# ==========================================
+
+#Código 3.1:
+
+miMax = max("Banano", "manzana", "Zanahoria")
+print("El máximo es:", miMax)
+
+"""
+Análisis:
+# 11. Antes de ejecutar: ¿Cuál crees que será el resultado devuelto por max()?
+
+Predicción: Zanahoria
+# 12. Ejecuta el código. ¿Cuál fue el resultado real devuelto?
+
+Resultado: manzana
+
+# Porque Python compara las cadenas de texto caracter por caracter utilizando sus valores en la tabla ASCII / Unicode:
+Las letras mayúsculas van antes que las minúsculas:
+"Banano" empieza con 'B' (Unicode 66).
+"Zanahoria" empieza con 'Z' (Unicode 90).
+"manzana" empieza con 'm' (Unicode 109).
+Como max() busca el valor más grande según la tabla Unicode, las letras minúsculas le ganan siempre a cualquier mayúscula.
+
+
 """
