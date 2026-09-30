@@ -76,7 +76,7 @@ Predicciones de Salida (Escribe el resultado exacto):
 
 #Código 3.1:
 
-miMax = max("Banano", "manzana", "Zanahoria")
+miMax = min("Banano", "manzana", "Zanahoria")
 print("El máximo es:", miMax)
 
 """
@@ -88,12 +88,16 @@ Predicción: Zanahoria
 
 Resultado: manzana
 
-# Porque Python compara las cadenas de texto caracter por caracter utilizando sus valores en la tabla ASCII / Unicode:
+# 13. Sabiendo que en la tabla ASCII las mayúsculas tienen valores numéricos menores que las minúsculas, explica por qué "manzana" fue seleccionada como la mayor frente a "Zanahoria".
+Porque Python compara las cadenas de texto caracter por caracter utilizando sus valores en la tabla ASCII / Unicode:
 Las letras mayúsculas van antes que las minúsculas:
 "Banano" empieza con 'B' (Unicode 66).
 "Zanahoria" empieza con 'Z' (Unicode 90).
 "manzana" empieza con 'm' (Unicode 109).
 Como max() busca el valor más grande según la tabla Unicode, las letras minúsculas le ganan siempre a cualquier mayúscula.
 
+# 14. Cambia la función de max() a min(). ¿Qué valor obtienes ahora y por qué?
+
+Resultado: Banano
 
 """
