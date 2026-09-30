@@ -41,6 +41,8 @@ elif comida == "asado":
 else:
     print("Lo siento, no tengo información sobre ese platillo. ")
 
+#Busque los platillos tipicos latinoamericanos en google 
+
 ## Ejemplo de salida esperada:
 """
 Bienvenido al programa de comidas de Latinoamérica.

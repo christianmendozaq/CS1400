@@ -34,10 +34,10 @@ for radio in radios:
 
     # TODO Tarea 2: Verifica con if/else si el radio es válido (mayor a 0).
     if radio > 0:
-        print(f"Radio: {radio}")
+        area = math.pi * (radio ** 2)
+        print(f"Radio: {radio} y el area es: {area}")
     else:
-        print(f"Radio: {radio} Error por que el radio debe ser mayor que cero.")
-
+        print(f"Radio: {radio} Error: El radio debe ser mayor que cero.")
 """
 # --- PARTE 2: Iteración interactiva y continua (WHILE Loop) ---
 
