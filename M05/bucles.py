@@ -115,7 +115,7 @@ Modifica la línea a: range(2, 11, 2).
 Los valores que se imprimieron fueron: 2, 4, 6, 8, 10.
 El tercer argumento especifica el incremento o tamaño del paso entre cada iteración.
 """
-
+"""
 # Sección 4: Iteración sobre Secuencias (Cadenas y Listas)
 # Un bucle for permite iterar directamente sobre los elementos de una colección sin necesidad de usar contadores manualmente.
 # ==========================================
@@ -135,7 +135,7 @@ print("--- Lista de frutas ---")
 for fruta in frutas:
     print(fruta)
 
-"""
+
 Análisis:
 # 15. En el primer bucle for letra in palabra:, ¿qué representa la variable letra en cada paso del bucle?
 Representa un caracter individual de la cadena de texto leyendolo de izquierda a derecha.
@@ -146,3 +146,37 @@ La mejor opcion es usar la iteracion directa (for fruta in frutas:), por que el 
 lo guarda y lo usa, en la siguiente iteración toma el segundo y asi sucesivamente. Mientras que con el acceso por índices
 primero cuenta cuantos elementos hay en la lista y luego accede a cada uno mediante su índice, que tu le tienes que proporcionar manualmente.
 """
+# Sección 5: Sentencias de Control de Bucles (break y continue)
+# Podemos alterar el flujo normal de un bucle mediante instrucciones de control.
+# ==========================================
+
+#Código 5:
+# Uso de break y continue
+print("Demostración de continue:")
+for num in range(1, 6):
+    if num == 3:
+        continue
+    print("Número:", num)
+
+print("\nDemostración de break:")
+for num in range(1, 6):
+    if num == 3:
+        break
+    print("Número:", num)
+
+"""
+Análisis:
+# 17. Observa la salida de la Demostración de continue. ¿Qué número falta en la secuencia impresa y por qué ocurrió esto?
+Falto el numero 3 por que cuando la variable "num" es igual a 3, se ejecuta el continue que hace que se salte la iteracion actual
+y pasa al siguiente ciclo del bucle.
+
+# 18. Observa la salida de la Demostración de break. ¿Qué números se imprimieron y qué hace la instrucción break al ejecutarse?
+Se imprimieron el 1 y el 2, el break interrumpe y finaliza la ejecucion del buicle actual, cuando la variable "num" es igual a 3
+el bucle finaliza sin imprimir el número 3 ni los siguientes.
+
+# 19. Supón que construyes un bucle while True: para solicitar claves de acceso. ¿Qué sentencia te permitiría salir del bucle una vez
+# que el usuario ingrese la clave correcta?
+Usaria la sentencia break para salir del bucle una vez que la condicion de acceso sea correcta.
+"""
+
+
