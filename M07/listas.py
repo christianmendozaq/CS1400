@@ -131,9 +131,11 @@ tictactoe = [
 
 # Escriba el 'if' para detectar si la fila superior (índice 0) tiene tres "X":
 # Pista: Debe revisar las posiciones [0][0], [0][1] y [0][2]
+if tictactoe[0][0] == "X" and tictactoe[0][1] == "X" and tictactoe[0][2] == "X":
+    print("Fila superior tiene tres X")
 """
-¿Qué valor devolvería la instrucción tictactoe[1][1] en el tablero anterior? RESPUESTA: __________
+¿Qué valor devolvería la instrucción tictactoe[1][1] en el tablero anterior? RESPUESTA: Devolveria 0 (el de en puro medio del tablero)
 
-¿Para qué sirve un print() vacío que se coloca al final de un bucle que imprime una matriz? RESPUESTA: __________
+¿Para qué sirve un print() vacío que se coloca al final de un bucle que imprime una matriz? RESPUESTA: Hace un salto de linea para que se vea mas claro.
 
 """
