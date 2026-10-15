@@ -69,3 +69,39 @@ print("Nombres:", playerNames)
 print("Números:", playerNumbers)
 #Agregue estos ultimos print para verificar que esuvieran bien los cambios.
 
+#Contadores e Iteradores (Counters and Iterators)
+import random
+
+def Generate_Numbers():
+    numbers = []
+    for i in range(20):
+        num = random.randint(1, 50)
+        numbers.append(num)
+    return numbers
+
+# Llamada a la función
+mis_numeros = Generate_Numbers()
+
+"""
+11. ¿Qué tipo de datos se está agregando a la lista numbers? RESPUESTA: Se estan agregando numero enteros.
+
+12. ¿Cuántos números se están agregando exactamente a la lista? RESPUESTA: se agregan 20 numeros por que en el "for" se puso un rango de 20.         
+
+13. ¿Qué devuelve (return) la función al final de su ejecución? RESPUESTA: la lista "numbers" llena con los 20 numeros aleatorios.
+
+"""
+
+#DESAFÍO DE CÓDIGO 2:
+def Even_Numbers(lista_origen):
+    even = []
+    # TODO: Itere la lista_origen y agregue a 'even' solo los números pares
+    return even
+
+def Ten_Or_Less(lista_origen):
+    # TODO: Cree una lista vacía, busque valores <= 10 y devuélvala
+    pass
+
+def Calcular_Diferencias(lista_origen):
+    # TODO: Calcule la distancia entre números consecutivos
+    # Ejemplo: [10, 7, 15] -> [3, 8]
+    pass
