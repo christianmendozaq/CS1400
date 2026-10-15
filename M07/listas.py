@@ -95,13 +95,45 @@ mis_numeros = Generate_Numbers()
 def Even_Numbers(lista_origen):
     even = []
     # TODO: Itere la lista_origen y agregue a 'even' solo los números pares
+    for num in lista_origen:
+        if num % 2 == 0:  #Con % obtenemos el residuo de la division, entonces, si el residuo de dividirlo entre 2 es 0, significa que es par.
+            even.append(num) #Va agregaando el numero al final de la lista
     return even
 
 def Ten_Or_Less(lista_origen):
     # TODO: Cree una lista vacía, busque valores <= 10 y devuélvala
-    pass
+    menos_10 = []
+    for num in lista_origen:
+        if num <= 10:
+            menos_10.append(num)
+    return menos_10
+
+    pass #No se si borrarlo, lo deje por si acaso, pero no hace nada.
 
 def Calcular_Diferencias(lista_origen):
     # TODO: Calcule la distancia entre números consecutivos
     # Ejemplo: [10, 7, 15] -> [3, 8]
-    pass
+    diferencias = [] #Creamos la lista vacia donde se guardaran las diferencias despues del calculo.
+    for i in range(len(lista_origen) - 1): #Con len contamos cuantos elementos hay y le agregamos -1 para que no se salga del rango de la lista.
+        diferencia = abs(lista_origen[i] - lista_origen[i + 1])  #abs nos da el valor absoluto de la resta de los dos numeros.
+        diferencias.append(diferencia)  #Lo vamos agregando a la lista.
+    return diferencias
+
+    pass #No se si borrarlo, lo deje por si acaso, pero no hace nada.
+
+#Listas 2D (2D Lists)
+#DESAFÍO DE CÓDIGO 3:
+tictactoe = [
+    ["X", "X", "X"],
+    ["-", "O", "-"],
+    ["O", "-", "-"]
+]
+
+# Escriba el 'if' para detectar si la fila superior (índice 0) tiene tres "X":
+# Pista: Debe revisar las posiciones [0][0], [0][1] y [0][2]
+"""
+¿Qué valor devolvería la instrucción tictactoe[1][1] en el tablero anterior? RESPUESTA: __________
+
+¿Para qué sirve un print() vacío que se coloca al final de un bucle que imprime una matriz? RESPUESTA: __________
+
+"""
