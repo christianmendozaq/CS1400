@@ -1,7 +1,7 @@
 # ==========================================
 #  M7 Tarea Listas
 #  Christian Mendoza  
-#  Fecha: 2026-10-13
+#  Fecha: 2026-10-14
 # ==========================================
 
 # Manejo de textos y listas
