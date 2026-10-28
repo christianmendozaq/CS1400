@@ -6,7 +6,7 @@
 
 #Parte 1: Código Vulnerable a Errores
 #Observa y analiza el siguiente segmento de código antes de ejecutarlo:
-
+"""
 lst = [1, 3, 7, 3]
 
 # Entrada de datos
@@ -21,7 +21,7 @@ print(lst[num])
 # Operación 3: Continuación
 print("El programa continuó con éxito.")
 
-"""Preguntas
+Preguntas
 1. Analiza las operaciones antes de ejecutar:
 ¿Por qué la Operación 1 (10 / num) fallará si el usuario ingresa 0?
     -Por que Python no puede dividir entre 0, por lo tanto dara un error.
@@ -39,3 +39,60 @@ Entrada del usuario	¿Llegó a imprimirse "El programa continuó..."? (Sí/No)	N
 3. ¿Qué ocurre con la ejecución de las líneas de código subsiguientes cuando Python encuentra un error no capturado en una línea previa?
 - Se detiene el programa y te da un mensaje de error en la consola, por lo tanto las siguientes lineas de codigo no se ejecutan.
 """
+#Parte 2: Control de Flujo con try / except
+#Para evitar que el programa se detenga, envolvemos el código propenso a errores dentro de un bloque try y capturamos las fallas con except.
+
+try:
+    lst = [1, 3, 7, 3]
+    num = int(input("Ingrese un número entero: "))
+    
+    print(10 / num)
+    print(lst[num])
+
+except ValueError:
+    print("❌ Error: Debes ingresar un número entero válido (sin letras).")
+except ZeroDivisionError:
+    print("❌ Error: No es posible dividir entre cero.")
+except IndexError:
+    print("❌ Error: Indice fuera de rango. Ingresa un numero dentro del rango de la lista.")
+except:
+    print("❌ Ocurrió un error general.")
+
+print("El programa continúa su ejecución normal...")
+
+"""
+Preguntas y Modificaciones
+4.Ejecuta el código anterior e ingresa "dos". ¿Qué mensaje se imprime? ¿Se ejecuta la última línea de "El programa continúa..."?
+    -❌ Error: Debes ingresar un número entero válido (sin letras).
+    El programa continúa su ejecución normal...
+    (Si se ejetuta la ultima linea)
+
+5.Ejecuta el código e ingresa 0. ¿Por qué se activa el mensaje "Ocurrió un error general" en lugar del de ValueError?
+    -Por que Python lee los except linea por linea, entonces, el primero solo saldria si diera un ValueError, pero como este no es el caso,
+    ignora ese except y pasa al siguiente, que es un except generico y por lo tanto se activa ese mensaje de error.
+
+6.Modificación de código 1: Agrega un bloque except ZeroDivisionError específico con el mensaje: "❌ Error: No es posible dividir entre cero."
+7.Modificación de código 2: Identifica el tipo de error que ocurre al intentar acceder a un índice inexistente en la lista lst
+ (al ingresar 100). Agrega un bloque except específico para capturar dicho error con un mensaje descriptivo.
+8.Pega tu código corregido con las 3 excepciones específicas aquí.
+try:
+    lst = [1, 3, 7, 3]
+    num = int(input("Ingrese un número entero: "))
+    
+    print(10 / num)
+    print(lst[num])
+
+except ValueError:
+    print("❌ Error: Debes ingresar un número entero válido (sin letras).")
+except ZeroDivisionError:
+    print("❌ Error: No es posible dividir entre cero.")
+except IndexError:
+    print("❌ Error: Indice fuera de rango. Ingresa un numero dentro del rango de la lista.")
+except:
+    print("❌ Ocurrió un error general.")
+
+print("El programa continúa su ejecución normal...")
+
+"""
+
+#PARTE 3 Rastrear Errores con traceback y Controlar raise / finally
