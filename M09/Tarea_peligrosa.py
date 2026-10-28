@@ -94,7 +94,7 @@ except:
 print("El programa continúa su ejecución normal...")
 
 """
-
+"""
 #PARTE 3 Rastrear Errores con traceback y Controlar raise / finally
 # A. Diagnóstico técnico con traceback
 #   A veces necesitamos registrar el detalle técnico del error para los desarrolladores sin detener la aplicación.
@@ -110,10 +110,39 @@ except ValueError as e:
 
 print("El programa continúa...")
 
-"""
 9.En la línea except ValueError as e, ¿qué representa la variable e?
     - La variable e representa donde se va a guardar la informacion del error que se capturo dentro del bloque except del ValueError.
 
 10.¿Qué ventaja ofrece la función traceback.format_tb() frente a simplemente mostrar un mensaje amigable al usuario?
     - La ventaja es que nos da a detalle del error, asi hace al usuario mas facil de entender que paso y como corregirlo.
+"""
+
+#B. Validación explícita con raise y garantía con finally
+#Podemos forzar la creación de nuestras propias excepciones usando raise cuando un dato no cumple con nuestras reglas de negocio,
+# y asegurar la ejecución de código final con finally.
+
+print("--- Validación de Rango ---")
+num = 0
+
+while num < 1 or num > 10:
+    try:
+        num = int(input("Ingrese un número del 1 al 10: "))
+        
+        if num < 1 or num > 10:
+            raise Exception("El número está fuera del rango permitido.")
+            
+    except ValueError:
+        print("❌ Error: Formato incorrecto, se esperaba un número.")
+    except Exception as e:
+        print(f"⚠️ Error de validación: {e}")
+    finally:
+        print("🔔 [Bloque Finally] Intento de entrada finalizado.")
+
+print(f"¡Número válido ingresado con éxito! ({num})")
+
+"""
+11.¿En qué situaciones se ejecutará el código dentro del bloque finally?
+12.¿Qué función cumple la palabra clave raise en el condicional if num < 1 or num > 10?
+13.¿Qué ocurre en el bucle while cuando el usuario ingresa un valor válido (ejemplo: 5)?
+
 """
