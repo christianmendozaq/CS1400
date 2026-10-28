@@ -96,3 +96,24 @@ print("El programa continúa su ejecución normal...")
 """
 
 #PARTE 3 Rastrear Errores con traceback y Controlar raise / finally
+# A. Diagnóstico técnico con traceback
+#   A veces necesitamos registrar el detalle técnico del error para los desarrolladores sin detener la aplicación.
+import traceback
+
+try:
+    num = int(input("Ingrese un número: "))
+    print(10 / num)
+except ValueError as e:
+    print("⚠️ Capturamos un ValueError. Detalle técnico:")
+    s = traceback.format_tb(e.__traceback__)
+    print(s)
+
+print("El programa continúa...")
+
+"""
+9.En la línea except ValueError as e, ¿qué representa la variable e?
+    - La variable e representa donde se va a guardar la informacion del error que se capturo dentro del bloque except del ValueError.
+
+10.¿Qué ventaja ofrece la función traceback.format_tb() frente a simplemente mostrar un mensaje amigable al usuario?
+    - La ventaja es que nos da a detalle del error, asi hace al usuario mas facil de entender que paso y como corregirlo.
+"""
