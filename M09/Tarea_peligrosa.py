@@ -3,10 +3,10 @@
 #  Christian Mendoza  
 #  Fecha: 2026-10-27
 # ==========================================
-
+"""
 #Parte 1: Código Vulnerable a Errores
 #Observa y analiza el siguiente segmento de código antes de ejecutarlo:
-"""
+
 lst = [1, 3, 7, 3]
 
 # Entrada de datos
@@ -39,6 +39,7 @@ Entrada del usuario	¿Llegó a imprimirse "El programa continuó..."? (Sí/No)	N
 3. ¿Qué ocurre con la ejecución de las líneas de código subsiguientes cuando Python encuentra un error no capturado en una línea previa?
 - Se detiene el programa y te da un mensaje de error en la consola, por lo tanto las siguientes lineas de codigo no se ejecutan.
 """
+"""
 #Parte 2: Control de Flujo con try / except
 #Para evitar que el programa se detenga, envolvemos el código propenso a errores dentro de un bloque try y capturamos las fallas con except.
 
@@ -54,13 +55,11 @@ except ValueError:
 except ZeroDivisionError:
     print("❌ Error: No es posible dividir entre cero.")
 except IndexError:
-    print("❌ Error: Indice fuera de rango. Ingresa un numero dentro del rango de la lista.")
+   print("❌ Error: Indice fuera de rango. Ingresa un numero dentro del rango de la lista.")
 except:
     print("❌ Ocurrió un error general.")
-
 print("El programa continúa su ejecución normal...")
 
-"""
 Preguntas y Modificaciones
 4.Ejecuta el código anterior e ingresa "dos". ¿Qué mensaje se imprime? ¿Se ejecuta la última línea de "El programa continúa..."?
     -❌ Error: Debes ingresar un número entero válido (sin letras).
@@ -92,9 +91,9 @@ except:
     print("❌ Ocurrió un error general.")
 
 print("El programa continúa su ejecución normal...")
+"""
+"""
 
-"""
-"""
 #PARTE 3 Rastrear Errores con traceback y Controlar raise / finally
 # A. Diagnóstico técnico con traceback
 #   A veces necesitamos registrar el detalle técnico del error para los desarrolladores sin detener la aplicación.
@@ -142,7 +141,9 @@ print(f"¡Número válido ingresado con éxito! ({num})")
 
 """
 11.¿En qué situaciones se ejecutará el código dentro del bloque finally?
+    - Se ejecutara siempre, no importa el resultado del try y los except.
 12.¿Qué función cumple la palabra clave raise en el condicional if num < 1 or num > 10?
+    - Genera un error, en este caso una excepcion si se cumple la condicion.
 13.¿Qué ocurre en el bucle while cuando el usuario ingresa un valor válido (ejemplo: 5)?
-
+    - Se termina el bucle whhile y se imprime el finally y el ultimo print.
 """
