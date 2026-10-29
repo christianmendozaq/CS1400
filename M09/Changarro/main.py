@@ -8,12 +8,12 @@ def mostrar_menu():
     # El usuario puede elegir entre ver el inventario, agregar un producto, buscar un precio o salir.
     # El programa seguirá ejecutándose hasta que el usuario elija salir.
     # TODO #1 Completa el menú de opciones imprimiendo un mensaje y las opciones.
-    print("***MENU PRINCIPAL***")
+    print("\n***MENU PRINCIPAL***")
     print("Escoge una de las siguientes opciones: ")
-    print("\n 1.- Ver el inventario. ")
-    print("\n 2.- Agregar un producto. ")
-    print("\n 3.- Buscar un precio. ")
-    print("\n 4.- Salir. ")
+    print("1.- Ver el inventario. ")
+    print("2.- Agregar un producto. ")
+    print("3.- Buscar un precio. ")
+    print("4.- Salir. ")
         
 
 def ejecutar_programa():
