@@ -115,7 +115,7 @@ print("El programa continúa...")
 10.¿Qué ventaja ofrece la función traceback.format_tb() frente a simplemente mostrar un mensaje amigable al usuario?
     - La ventaja es que nos da a detalle del error, asi hace al usuario mas facil de entender que paso y como corregirlo.
 """
-
+"""
 #B. Validación explícita con raise y garantía con finally
 #Podemos forzar la creación de nuestras propias excepciones usando raise cuando un dato no cumple con nuestras reglas de negocio,
 # y asegurar la ejecución de código final con finally.
@@ -139,11 +139,84 @@ while num < 1 or num > 10:
 
 print(f"¡Número válido ingresado con éxito! ({num})")
 
-"""
+
 11.¿En qué situaciones se ejecutará el código dentro del bloque finally?
     - Se ejecutara siempre, no importa el resultado del try y los except.
 12.¿Qué función cumple la palabra clave raise en el condicional if num < 1 or num > 10?
     - Genera un error, en este caso una excepcion si se cumple la condicion.
 13.¿Qué ocurre en el bucle while cuando el usuario ingresa un valor válido (ejemplo: 5)?
     - Se termina el bucle whhile y se imprime el finally y el ultimo print.
+"""
+
+#Parte 4: Aplicación Práctica — Calculadora Robusta
+#Completa el motor de la calculadora interactiva. Debe mantenerse en ejecución continua pidiendo datos hasta que 
+# el cálculo se complete correctamente sin ningún error.
+
+def calculadora_segura():
+    print("\n--- Calculadora Robusta ---")
+
+    while True:
+        try:
+            n1 = float(input("Ingresa el primer número: "))
+            n2 = float(input("Ingresa el segundo número: "))
+            op = input("Operación (+, -, *, /): ")
+
+            # Validar operador permitido
+            if op not in ['+', '-', '*', '/']:
+                # TODO 1: Lanza (raise) un ValueError con el mensaje "Operador no válido"
+                #pass
+                raise ValueError("Operador no válido")
+
+            # Realizar cálculos
+            if op == '+':
+                resultado = n1 + n2
+            elif op == '-':
+                resultado = n1 - n2
+            elif op == '*':
+                resultado = n1 * n2
+            elif op == '/':
+                resultado = n1 / n2
+
+            print(f"✅ Resultado: {resultado}")
+            break  # Salir del bucle si el cálculo se realizó con éxito
+            
+        # --- MANEJO DE EXCEPCIONES ---
+
+        # TODO 2: Captura el error de formato cuando el usuario ingresa texto en lugar de números
+        except ValueError as e:
+            if str(e) == "Operador no válido":
+                print(f"❌ Error de entrada: {e}")
+            else:
+                print("❌ Error: Ingrese valores numéricos válidos.")
+
+        # TODO 3: Captura la división por cero
+        except ZeroDivisionError as e:
+            print(f"❌ Error: No se puede dividir entre cero: {e}")
+
+        # TODO 4: Captura el ValueError (generado por el operador inválido) y muestra e
+        #Segun yo se tuvo que modificar en el TODO2 para que pudiera capturar el error y distinguir cual ocurre primero
+        #Dure mucho tratando de entender como hacerlo, hasta que entendi que se tenia que hacer un if si usaba el raise y else si usaba
+        #el otro ValueError.
+        finally:
+            # TODO 5: Muestra siempre un mensaje de cierre de intento
+           #pass
+           print("🔔 [Bloque Finally] Intento de entrada finalizado.") #Lo puse igual que en el ejercicio anterior
+
+calculadora_segura()
+
+"""
+14.¿Cuál es el propósito de la instrucción break colocada al final de la sección try?
+    -Con el break se finaliza el bucle del while si todo el bucle se realiza de manera correcta.
+    Si no se pusiera el break, el programa te seguiria pidiendo numeros aunque la operacion anterior fuera exitosa.
+
+15.Si el usuario ingresa n2 = 0 y op = '/', ¿se llega a ejecutar la línea print(f"✅ Resultado: {resultado}")? 
+Explica la secuencia del flujo de ejecución.
+    -No, no se ejecuta ese print, por que primero se leen los numeros ingresados, despues el operador, el programa al detectar
+    que se quiere dividir entre 0, genera un error de ZeroDivisionError y ahi te lanza el except correspondiente con su print,
+    ejecuta el finally y vuelve a correr el while.
+
+16.¿Qué sucedería con la experiencia de usuario si omitimos el bucle while True en este programa?
+    -El programa solo se podria utilizar una sola vez, ya sea con error o con un calculo exitoso, por lo tanto si el usuario
+    se llegara a equivocar, tendria que volver a correr el programa, haciendolo mas tedioso; en cambio con el while, si te equivocas
+    el programa no se detiene y te vuelve a pedir inputs validos.
 """
