@@ -98,8 +98,16 @@ def parte_uno_entrada_salida():
     # input() PIDE informacion al usuario (entrada). Siempre devuelve texto.
     nombre = input("Hola! Como te llamas? ")
 
-    # TODO ¿Qué hace este bloque try/except ValueError?
+    # TODO ¿Qué hace este bloque try/except ValueError?.
+    """
+    Convierte la entrada del usuario a numero entero y si el usuario escribe algo que no es numero
+    se captura el error y le asiga el valor de 0 para que no se rompa el programa.
+    """
     # ¿Qué pasaría si el usuario escribe “veinte” y quitamos ese bloque?
+    """
+    El programa se detendria y arrojaria el ValueError, y por lo tanto no se ejecutaria 
+    el resto del programa.
+    """
 
     try:
         edad = int(input("Cuantos anos tienes? "))
