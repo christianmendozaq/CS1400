@@ -156,6 +156,25 @@ def parte_uno_entrada_salida():
 # PARTE 2 (EXTRA- si tienes tiempo): CONSUMIR UNA API JSON
 # ==========================================================
 #TODO ¿Que hace este api?
+"""
+(Lei en https://www.geeksforgeeks.org/python/python-api-tutorial-getting-started-with-apis/#google_vignette)
+
+Primero quise entender lo que es una API, sus siglas significan Interfaz de Programación de Aplicaciones,
+que es un conjunto de reglas y protocolos que permiten la comunicacion e interaccion entre diferentes aplicaciones.
+
+En este caso, la API sirve para obtener informacion de la lista de interntet de unos usuarios falsos guardados,
+primero le pregunta el usuario que eliga un numero, se asegura que haya escrito un numero y sino te da un mensaje de error,
+despues se guarda en la variable url la concatenacion de las variables url_base y entrada,
+despues se manda el la peticion a la url y se guarda la respuesta en la variable texto_json,
+despues se convierte en texto json a diccionario de python y se guarda en la variable datos,
+con el if not datos: se asegura que si no hay datos, te diga que no se encontro el usuario 
+y si si exsite te muestra la informacion del usuario elegido.
+Despues te muiestra la direccion en formato json para ver la diferenciancia entre un diccionario de python y un json.
+Al final termina con un refran de la abuela y te dice que todo salio bien pero si hay un error te lo muestra.
+
+
+"""
+
 def parte_dos_api_json(nombre):
     """Consulta una API publica que responde en formato JSON."""
 
