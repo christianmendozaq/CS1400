@@ -124,6 +124,11 @@ def parte_uno_entrada_salida():
     print(f"Mucho gusto, {nombre}!")                 # f-string
     
     # TODO ¿Como usamos acentos en espanol, otra vez?
+    """
+    Python 3 reconoce los acentos de forma nativa, pero de igual manera si nos queremos asegurar que 
+    se muestren correctamente en una version anterior, podemos usar la codificacion utf-8 al inicio del archivo,
+    (que de hecho ya esta puesta en comentario: # -*- coding: utf-8 -*-).
+    """
     print("Tienes", edad, "anos.")                   # comas
     print("Tu comida favorita es " + comida + ".")   # concatenacion con +
 
