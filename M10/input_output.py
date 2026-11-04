@@ -1,3 +1,9 @@
+# ==========================================
+# M10 Proyecto Refranes
+#  Christian Mendoza  
+#  Fecha: 2026-11-03
+# ==========================================
+
 # -*- coding: utf-8 -*-
 """
 ==========================================================
@@ -39,6 +45,12 @@ REFRANES = {
 
     "Agua que no has de beber, dejala correr.":
         "Si algo no te conviene o no te toca, no te metas.",
+#REFRANES FAMILIARES
+    "El que con lobos anda a aullar se enseña.":
+            "Dependiendo de con quien te relaiciones, aprenderas a comportarte como ellos.",
+    
+    "El que es perico, donde quiera es verde.":
+            "El que es habil, en cualquier situacion se destaca.",
 }
 
 
